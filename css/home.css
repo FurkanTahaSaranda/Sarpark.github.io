@@ -1,0 +1,488 @@
+
+/*video slayt*/
+
+
+  /* Tüm slaytlarda aynı yazının konumunu ve stilini düzenleme */
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ortalamak için */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Yazıyı daha görünür kılmak için gölge */
+    text-align: center;
+    width: 90%;
+  }
+
+  .carousel-caption h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem; /* Başlık için büyüklük */
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+
+  .carousel-caption h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem; /* Açıklama için daha küçük yazı */
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 768px) {
+    .carousel-caption h5 {
+    font-size: 3rem; /* Başlık için büyüklük */
+    font-weight: bold;
+
+  }
+
+  .carousel-caption h6 {
+    font-size: 1.2rem; /* Açıklama için daha küçük yazı */
+    font-weight: bold;
+  }
+  }
+
+  .carousel-item video {
+    width: 100%;       /* Genişliği %100 yaparak ekranın tamamını kaplar */
+    height: 500px;     /* Yüksekliği sabit tutar */
+    object-fit: cover; /* Videonun boyutunun, kutuya sığacak şekilde ayarlanmasını sağlar */
+  }
+
+  /* Mobil cihazlar için responsive ayarları */
+  @media (max-width: 768px) {
+    .carousel-item video {
+      height: 800px; /* Telefonlarda videonun yüksekliğini artırdık */
+      object-fit: cover; /* Videoların zoom yaparak kapsamasını sağlıyoruz */
+      transform: scale(1.1); /* Zoom etkisi için videoyu biraz büyütüyoruz */
+    }
+  }
+
+
+
+  /* Video yüksekliği sabit, genişliği ekran boyutuna göre ayarlanacak */
+  .carousel-item video {
+    width: 100%;       /* Genişliği %100 yaparak ekranın tamamını kaplar */
+    height: 500px;     /* Yüksekliği sabit tutar */
+    object-fit: cover; /* Videonun boyutunun, kutuya sığacak şekilde ayarlanmasını sağlar */
+  }
+
+  /* Mobil cihazlar için responsive ayarları */
+  @media (max-width: 768px) {
+    .carousel-item video {
+      height: 650px; /* Telefonlarda videonun yüksekliğini daha küçük tutabiliriz */
+      
+    }
+  }
+
+
+
+
+
+
+
+/* Video slide ın alt kısmı , endüstrilere giden kısım , baca filtre*/
+  
+  @media (max-width: 991px) {
+    .card-group {
+      display: flex;
+      flex-direction: column; /* Alt alta diz */
+    }
+
+    .card {
+      width: 100%; /* Kartları tam genişlikte yap */
+      margin: 0 !important; /* Varsayılan marginleri sıfırla */
+      padding: 0 !important; /* Varsayılan paddingleri sıfırla */
+      border: none; /* Kartların arasındaki çizgiyi kaldır */
+      
+    }
+
+    .card .cstm-img {
+      width: 100%; /* Resimleri tam genişlik yap */
+      display: block; /* Gereksiz boşlukları önle */
+    }
+  }
+
+.card,
+.card .cstm-img {
+  border-radius: 0 !important; /* Tüm yuvarlatmaları kaldır */
+}
+
+
+  .card {
+  overflow: hidden; /* Taşmaları engelle */
+  border: none; /* Kartların arasındaki çizgiyi kaldır */
+  
+}
+
+.card .cstm-img {
+  transition: transform 0.3s ease-in-out; /* Geçiş efekti */
+  height: 320px;
+}
+
+
+@media (min-width: 3000px) {
+  .card .cstm-img {
+  transition: transform 0.3s ease-in-out; /* Geçiş efekti */
+  height: 750px;
+}
+
+}
+
+
+.card:hover .cstm-img {
+  transform: scale(1.1); /* Resmi %10 büyüt */
+}
+
+
+
+.carousel-caption h7{
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem; /* Açıklama için daha küçük yazı */
+    font-weight: bold;
+}
+
+
+.carousel-caption  .custom-outlinebutton{
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+/*Ara yazı */
+
+.custom-text{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    color: #000000;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+/*Grileşen kartlar , uygulamalara giden kısım*/
+/* Kartları ortalamak ve düzenli bir yapı oluşturmak için */
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Yatay ortalama */
+    gap: 20px; /* Kartlar arasındaki mesafe */
+  }
+
+  .cstm-card3 {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 320px; /* Kartların sabit genişliği */
+    max-width: 100%;
+  }
+
+  /* Mobilde tam genişlikte görünmesi için */
+  @media (max-width: 768px) {
+    .cstm-card3 {
+      width: 100%; /* Küçük ekranlarda kartlar tam genişlikte olur */
+    }
+  }
+
+  /* Linkin alt çizgisini kaldır ve metin rengini koru */
+  .cstm-card3 a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  /* Kart hover efekti */
+  .cstm-card3:hover {
+    background-color: rgba(146, 146, 146, 0.2);
+    /*transform: scale(1.02);*/
+  }
+
+  /* Resmi çerçeve içinde tutmak için */
+  .img-container {
+    width: 100%;
+    height: 250px; /* Resmin maksimum yüksekliği */
+    overflow: hidden;
+  }
+
+  .cst-img-3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmi sığdırıp kırpar */
+    transition: transform 0.3s ease-in-out;
+    border-radius: 0 !important; /* Tüm yuvarlatmaları kaldır */
+  }
+
+  /* Hover ile resmin büyümesini sağla */
+  .cstm-card3:hover .cst-img-3 {
+    transform: scale(1.1);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/*hakkımızda , hakkimizda*/
+
+
+@media (max-width:768px) {
+    .cstm-hakkimizdaimg{
+      height: 40vh;
+      object-fit: cover;
+    }
+  }
+  
+  
+    .custom-card-container5 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-card5 {
+    background: rgba(231, 231, 231, 0.384);
+    width: 100%;
+    max-width: 1920px;
+  }
+  
+  /* Varsayılan olarak PC formatı için (yanyana) ayar yapabilirsiniz.
+     Eğer 1500px üstünde de dikey düzen isterseniz bu kısmı da değiştirebilirsiniz. */
+  
+  /* 1500px ve altındaki ekranlar için telefon/tablet formatı: */
+  @media (max-width: 1500px) {
+    .custom-card-container5 .row {
+      flex-direction: column !important;  /* Dikey sıralama */
+    }
+    .custom-card-container5 .col-md-7,
+    .custom-card-container5 .col-md-5 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .custom-card-container5 .col-md-7 img {
+      width: 100%;
+      margin-bottom: 20px; /* Resim ile yazı arasına boşluk ekler */
+    }
+  }
+  
+  /* Küçük ekranlarda (768px ve altı) için isteğe bağlı düzenleme */
+  @media (max-width: 768px) {
+    .custom-card5 {
+      width: 90%;
+    }
+    
+    /* İstenirse yazı boyutlarını, boşlukları küçültebilirsiniz */
+  }
+  
+  @media (max-width: 768px) {
+    .custom-card-container5 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .custom-card5 {
+      margin: 0 !important;
+      width: 100% !important;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  /*misyonvizyon*/
+
+  .card1 {
+    position: relative;
+    width: 100%;              /* Genişliği %100 yaparak ekranı kaplar */
+    height: 800px;            /* PC boyutundaki sabit yüksekliği burada belirliyoruz */
+    top: 550px;               /* Konumu yukarıya kaydırabilirsiniz */
+  }
+  
+  .uygulamalarimg {
+    width: 100%;              /* Resmin genişliğini %100 yaparak ekranı kaplar */
+    height: 100vh;            /* Resmin yüksekliğini orantılı olarak ayarlarız */
+    max-height: 800px;        /* PC boyutundaki yüksekliği korur */
+    object-fit: cover;        /* Resmin boyutunun, kutuya sığacak şekilde ayarlanmasını sağlar */
+    object-position: center;  /* Resmin ortalanmasını sağlar */
+  }
+  
+  
+  /* Yazıların sağa hizalanması */
+  .text-overlay {
+    position: absolute;
+    top: 65%;
+    right: 10%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    width: 40%;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start; /* İçeriği yukarıdan başlat */
+  }
+  
+  .text-container {
+    position: relative;
+    padding-left: 40px; /* Çizgi ile yazı arasındaki boşluk */
+    border-left: 5px solid #0b006e; /* Sol tarafa çizgi ekler */
+  }
+  
+  .text-container h5,
+  .text-container p,
+  .text-container .btn-2 {
+    margin: 10px 0; /* Elemanlar arasında boşluk bırak */
+  }
+  
+  
+  
+  
+  
+  .text-overlay h5 {
+    font-family: 'Jost',sans-serif;
+    font-size: 3rem;          /* Başlık için büyüklük */
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .text-overlay p {
+    font-family: 'Jost',sans-serif;
+    font-size: 1.25rem;       /* Alt açıklama için daha küçük yazı */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color:#0b006e
+  }
+  
+  @media (max-width:1500px) {
+  
+    .text-overlay h5 {
+    font-family: 'Jost',sans-serif;
+    font-size: 3rem;          /* Başlık için büyüklük */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .text-overlay p {
+    font-family: 'Jost',sans-serif;
+    font-size: 1.25rem;       /* Alt açıklama için daha küçük yazı */
+    font-weight: bold;
+    margin-bottom: 10px;
+  
+  }
+  }
+  
+  
+  
+  /* TV ve geniş ekranlar için uyumlu ayar */
+  @media (min-width: 1200px) {
+    .card1 {
+      height: 600px;           /* Yüksekliği sabit tutuyoruz */
+    }
+  
+    .text-overlay {
+      font-size: 1.5rem; /* Geniş ekranlarda font boyutunu artırabiliriz */
+    }
+  }
+  
+  /* Mobil cihazlar için responsive ayar - Yazıyı ortalamak */
+  @media (max-width: 991px) {
+    .card1 {
+      height: 70vh;            /* Mobilde daha küçük yükseklik */
+    }
+  
+    .text-overlay {
+      text-align: center;      /* Yazıyı ortalar */
+      right: unset;            /* Sağdan hizalamayı kaldırır */
+      left: 47%;               /* Soldan ortalar */
+      transform: translateX(-50%) translateY(-50%); /* Hem yatay hem dikeyde ortalar */
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 1200px) and (min-width: 992px) {
+    .text-overlay {
+      top: 50%; /* Daha iyi hizalama için yukarı taşır */
+      right: 5%; /* Daha içe çekmek için */
+      width: 50%; /* Daha geniş tutarak taşmayı önler */
+    }
+  
+    .text-overlay h5 {
+      font-size: 2.5rem; /* Başlık boyutunu küçült */
+    }
+  
+    .text-overlay p {
+      font-size: 1.1rem; /* Yazıyı küçült */
+    }
+  }
+  
+  
+  
+  .btn-2{
+    width: 300px;
+    background-color: #ad0101;
+    border-color: #410000;
+  
+  }
+  
+
+
+
+
+  
+
+
+/*footerbg*/
+
+
+.footerbg{
+  position: relative;
+  top: 900px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+.html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+

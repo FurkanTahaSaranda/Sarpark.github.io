@@ -1,0 +1,222 @@
+/*banner*/
+.card1 {
+    position: relative;
+    width: 100%;
+    height: 300px; /* PC boyutunda sabit yükseklik */
+    top: 90px;
+  }
+
+  .uygulamalarimg {
+    width: 100%;
+    height: 100vh;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+  }
+
+  .text-container h5 {
+    font-family: 'Jost', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .btn-2 {
+    width: 200px;
+    background-color: #ad0101;
+    border-color: #410000;
+  }
+
+  /* TV ve geniş ekranlar */
+  @media (min-width: 1200px) {
+    .card1 {
+      height: 300px;
+    }
+  }
+
+  /* Mobil cihazlar */
+  @media (max-width: 991px) {
+    .text-container h5 {
+      font-size: 2.5rem;
+    }
+  }
+
+
+
+  .footerbg {
+    position: relative;
+    top: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+/*hakkımızda , hakkimizda*/
+.cstm-guideimg{
+    height: 40vh;
+    max-height: 400px;
+    object-fit: cover;
+    
+    
+}
+
+@media (max-width:768px) {
+    .cstm-guideimg{
+      height: 40vh;
+      object-fit: cover;
+
+    }
+  }
+  
+  
+    .custom-card-container5 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .custom-card5 {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 3920px;
+    border: none;
+  }
+  
+  /* Varsayılan olarak PC formatı için (yanyana) ayar yapabilirsiniz.
+     Eğer 1500px üstünde de dikey düzen isterseniz bu kısmı da değiştirebilirsiniz. */
+  
+  /* 1500px ve altındaki ekranlar için telefon/tablet formatı: */
+  @media (max-width: 1500px) {
+    .custom-card-container5 .row {
+      flex-direction: column !important;  /* Dikey sıralama */
+    }
+    .custom-card-container5 .col-md-7,
+    .custom-card-container5 .col-md-5 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .custom-card-container5 .col-md-7 img {
+      width: 100%;
+      margin-bottom: 20px; /* Resim ile yazı arasına boşluk ekler */
+    }
+  }
+  
+  /* Küçük ekranlarda (768px ve altı) için isteğe bağlı düzenleme */
+  @media (max-width: 768px) {
+    .custom-card5 {
+      width: 90%;
+    }
+    
+    /* İstenirse yazı boyutlarını, boşlukları küçültebilirsiniz */
+  }
+  
+  @media (max-width: 768px) {
+    .custom-card-container5 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .custom-card5 {
+      margin: 0 !important;
+      width: 100% !important;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+.container{
+    width: 100%; /* Container'ın genişliği, içinde bulunduğu öğenin %80'i kadar olacak */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Ana container */
+.cstm-container1 {
+    position: relative;
+    top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+    padding-left: 100px;
+    
+}
+
+
+
+
+
+
+/* İçerik alanı */
+.cstm-content {
+    flex: 1;
+}
+
+/* Mobilde sola yaslayıp genişletme */
+@media (max-width: 767px) {
+    .cstm-container1 {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 10px;
+        text-align: left;
+    }
+}
+
+/* 1200px ve altına gelince linkleri tamamen kaldır */
+@media (max-width: 1200px) {
+
+    .cstm-container1 {
+        justify-content: center;
+        width: 90%;
+    }
+}
+
+/* Tablet görünümü için */
+@media (max-width: 991px) {
+    .cstm-container1 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1500px) {
+    .cstm-container1 {
+        width: 100%;
+    }
+}

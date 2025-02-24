@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sarpark Teknoloji Şirketi olarak Enerji Verimliliği Alanında Lider Çözümler sunarak, daha temiz ve verimli bir gelecek için katkı sağlıyoruz.">
+    <meta class="keywords" content="Sarpark Teknoloji,Sarpark,Enerji,yalıtım,nanoteknoloji,baca filtresi">
+    
+
+    <link rel="icon" href="images/icon2.png" sizes="any">
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+    <meta name="theme-color" content="#ffffff">
+    
+
+    <title>Sarpark Teknoloji</title>
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+      
+      <!-- Font Awesome CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+      <!-- jQuery (Tam sürüm) -->
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    
+      <!-- Popper.js -->
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+      <link rel="stylesheet" href="css/home.css">
+      <link rel="stylesheet" href="css/language.css">
+      <link rel="stylesheet" href="css/general-style.css">
+      <script src="js/script.js" defer></script>
+      <script src="js/language.js" defer></script>
+      <script src="js/general-script.js" defer></script>
+      
+
+
+    </head>
+    
+<body>
+
+  
+  <div id="navbar"></div>
+  <script>
+      fetch("navbar.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
+
+  
+
+
+
+<!-- Dil Menüsü -->
+<div id="language">
+    <button id="menu-btn">🌍</button>
+    <div id="menu-list">
+        <div class="language-option" data-lang="tr">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" alt="Türkçe">
+            <span>Türkçe</span>
+        </div>
+        <div class="language-option" data-lang="en">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English">
+            <span>English</span>
+        </div>
+        <div class="language-option" data-lang="fr">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="Français">
+            <span>Français</span>
+        </div>
+        <div class="language-option" data-lang="ar">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" alt="العربية">
+            <span>العربية</span>
+        </div>
+        <div class="language-option" data-lang="de">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="Deutsch">
+            <span>Deutsch</span>
+        </div>
+        <div class="language-option" data-lang="ja">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg" alt="日本語">
+          <span>日本語</span>
+      </div>      
+    </div>
+</div>
+
+
+ 
+
+
+
+
+
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" style="position: relative;top: 90px;" data-ride="carousel" data-interval="4000" data-pause="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <video class="d-block w-100" autoplay muted loop playsinline>
+        <source src="videos/rüzgargülüvideo2.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block w-100" autoplay muted loop playsinline>
+        <source src="videos/devsantralvideo3.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block w-100" autoplay muted loop playsinline>
+        <source src="videos/günespanelvideo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="carousel-item">
+      <video class="d-block w-100" autoplay muted loop playsinline>
+        <source src="videos/fabrika2video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="carousel-caption">
+    <h5 data-i18n="home_videoslide_h5">GELECEĞE YÖN VEREN ENERJİ ÇÖZÜMLERİ</h5>
+    <h6 data-i18n="home_videoslide_h6"> Sarpark Teknoloji Şirketi olarak Enerji Verimliliği Alanında Lider Çözümler sunarak, daha temiz ve verimli bir gelecek için katkı sağlıyoruz.</h6>
+  </div>
+
+</div>
+
+
+
+
+
+
+<div class="card-group" style="position: relative; top: 90px;">
+    <div class="card">
+      <a href="industry1.html" class="card-link">
+      <img src="images/bacalar.jpeg" class="card-img-top cstm-img" alt="..." onmousedown="return false;">
+      <div class="carousel-caption">
+        <h7 data-i18n="home_industry1_h7">BACALARIN KİRLİ HAVA FİLTRESİ <br>
+        </h7>
+      </div>
+    </a>
+    </div>
+    <div class="card">
+      <a href="industry2.html" class="card-link">
+      <img src="images/borular2.jpeg" class="card-img-top cstm-img" alt="..." onmousedown="return false;">
+      <div class="carousel-caption">
+        <h7 data-i18n="home_industry2_h7">BORULARA NANOTEKNOLOJİ ÇÖZÜMÜ<br>
+        </h7>
+      </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="industry3.html" class="card-link">
+      <img src="images/panelendüstri.png" class="card-img-top cstm-img" alt="..." onmousedown="return false;">
+      <div class="carousel-caption">
+        <h7 data-i18n="home_industry3_h7">GÜNEŞ PANELLERİ İÇİN ENDÜSTRİYEL YALITIM<br>
+        </h7>
+      </div>
+      </a>
+    </div>
+</div>
+
+
+
+
+<div class="text1" style="position: relative; top: 150px;">
+  <p data-i18n="home_ourcompany_text" class="text-center font-weight-bold custom-text">Şirketimiz,Sürdürülebilir ve Verimli Çözümler Geliştirerek <br> Çevresel Etkileri Minimize Eder ve Sektördeki Yenilikçi Vizyonuyla Geleceği Şekillendirir.
+  </p>
+</div>
+
+
+
+
+
+
+<div class="card-deck" style="position: relative; top: 250px;">
+  <div class="card cstm-card3">
+    <a href="application1.html" class="card-link">
+      <div class="img-container">
+        <img src="images/bacafiltre.jpeg" class="card-img-top cst-img-3" alt="..." onmousedown="return false;">
+      </div>
+      <div class="card-body">
+        <h5 data-i18n="home_application1_h5" class="card-title customh7">Baca Filtreleme</h5>
+        <p data-i18n="home_application1_p" class="card-text customh5">Bacaların düzenli olarak temizlenmesi, karbon salınımını azaltarak daha yaşanabilir bir dünya sağlar. Ayrıca, bu temizlik işlemi enerji verimliliğini artırır ve hava kalitesini iyileştirir.</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="card cstm-card3">
+    <a href="application2.html" class="card-link">
+      <div class="img-container">
+        <img src="images/aerogel.jpeg" class="card-img-top cst-img-3" alt="..." onmousedown="return false;">
+      </div>
+      <div class="card-body">
+        <h5 data-i18n="home_application2_h5" class="card-title customh7">Endüstride Nanoteknoloji</h5>
+        <p data-i18n="home_application2_p" class="card-text customh5">Endüstride nanoteknoloji ile geliştirilen aerojel kaplama, doğalgaz borularına üstün yalıtım ve su geçirmezlik özellikleri kazandırarak ısı kaybını minimize eder ve korozyonu önler.</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="card cstm-card3">
+    <a href="application3.html" class="card-link">
+      <div class="img-container">
+        <img src="images/günespanelyalıtım.jpeg" class="card-img-top cst-img-3" alt="..." onmousedown="return false;">
+      </div>
+      <div class="card-body">
+        <h5 data-i18n="home_application3_h5" class="card-title customh7">Güneş Panelleri Yalıtım Çözümleri</h5>
+        <p data-i18n="home_application3_p" class="card-text customh5">Endüstriyel yalıtım ekipmanları, güneş panellerinin verimliliğini artırarak sürdürülebilir ve temiz bir enerji üretimi sağlar.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="hakkimizdayeri" style="position: relative; top: 400px;">
+  <div class="custom-card-container5 d-flex align-items-center justify-content-center">
+    <div class="card mb-3 custom-card5 cstm-card5">
+      <div class="row no-gutters">
+        <div class="col-md-7">
+          <img src="images/hakkimizda.jpeg" class="img-fluid tablet-img cstm-hakkimizdaimg" alt="..." onmousedown="return false;">
+        </div>
+        <div class="col-md-5">
+          <div class="card-body">
+            <h5 data-i18n="home_aboutus_h5" class="card-title customh7">
+              Sarpark Teknoloji: Endüstriyel Enerji Verimliliği ve Sürdürülebilir Çözümlerde Yenilikçi Bir Yaklaşım Sergiler
+            </h5>
+            <p data-i18n="home_aboutus_p" class="card-text customh5">
+              Şirketimiz, enerji verimliliği alanında yenilikçi çözümler sunarak sürdürülebilir bir geleceğe katkı sağlamayı amaçlamaktadır. Temiz ve verimli enerji kullanımını teşvik eden projelerimizle, sektöre yön veren teknolojiler geliştiriyoruz. Çevre dostu ve yüksek performanslı çözümlerimizle, hem işletmelerin enerji maliyetlerini azaltıyor hem de karbon ayak izlerini düşürmelerine yardımcı oluyoruz. Geleceğe yön veren enerji çözümlerimizle, daha yaşanabilir bir dünya için çalışıyoruz.
+            </p>
+            <p data-i18n="home_aboutus_smalltext" class="card-text">
+              <small class="text-muted">SARPARK TEKNOLOJİ</small>
+            </p>
+            <a href="career.html" class="card-link">
+              <button data-i18n="home_aboutus_button" type="button" class="btn btn-outline-success">Daha Fazla Bilgi</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="card1">
+  <img src="images/misyonn.jpeg" class="img-fluid uygulamalarimg" alt="..." onmousedown="return false;">
+  <div class="text-overlay">
+    <div class="text-container">
+      <h5 data-i18n="home_mission_h5">Temiz bir dünya inşa etmek</h5>
+      <p data-i18n="home_mission_p">Endüstriyel enerji verimliliğini artıracak teknolojiler ve yenilikçi projelerle çevre dostu bir dünya inşa etmeyi hedefliyoruz. Sürdürülebilir çözümlerle kaynakları daha verimli kullanarak gelecek nesillere yaşanabilir bir çevre bırakmayı amaçlıyoruz.   </p>
+      <p data-i18n="home_mission_mission"><strong>✔ MİSYON</strong></p>
+      <p data-i18n="home_mission_vision"><strong>✔ VİZYON</strong></p>
+      <a href="mission.html">
+        <button data-i18n="home_mission_button" type="button" class="btn btn-primary btn-lg btn-2">Detay</button>
+      </a>
+    </div>
+  </div>  
+</div>
+
+
+
+
+
+<div id="footer"></div>
+<script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+
+
+
+
+</body>
+</html>

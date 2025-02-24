@@ -1,0 +1,140 @@
+/*banner*/
+.card1 {
+    position: relative;
+    width: 100%;
+    height: 300px; /* PC boyutunda sabit yükseklik */
+    top: 90px;
+  }
+
+  .uygulamalarimg {
+    width: 100%;
+    height: 100vh;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+  }
+
+  .text-container h5 {
+    font-family: 'Jost', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .btn-2 {
+    width: 200px;
+    background-color: #ad0101;
+    border-color: #410000;
+  }
+
+  /* TV ve geniş ekranlar */
+  @media (min-width: 1200px) {
+    .card1 {
+      height: 300px;
+    }
+  }
+
+  /* Mobil cihazlar */
+  @media (max-width: 991px) {
+    .text-container h5 {
+      font-size: 2.5rem;
+    }
+  }
+
+
+/*gövde kısmı , biz kimiz*/
+
+.cstm-container1{
+    position: relative;
+    top: 140px;
+    display: flex;
+    justify-content: center; /* Yatayda ortalar */
+    width: 50%;  /* PC ve tabletlerde dar tut */
+    margin: auto;
+}
+
+/* Tablet görünümü için */
+@media (max-width: 991px) {
+    .cstm-container1 {
+        width: 70%;  /* Tabletlerde biraz genişlet */
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1500px) {
+    .cstm-container1 {
+        width: 100%;  /* Tabletlerde biraz genişlet */
+    }
+}
+
+/* Mobilde sola yaslayıp genişletme */
+@media (max-width: 767px) {
+    .cstm-container1 {
+        width: 100%;  /* Tam genişlik */
+        justify-content: flex-start;  /* Sola hizala */
+        padding-left: 10px;  /* Yazının direkt kenara yapışmaması için */
+        text-align: left;  /* Yazıları sola yasla */
+    }
+}
+
+.cstm-card2{
+    border: none;
+}
+
+.cstm-greenimg{
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+
+
+.footerbg{
+    position: relative;
+    top: 200px;
+  }
+
+
+
+
+
+
+
+/*mission part*/
+
+/*product features*/
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Özellikler arasında daha fazla boşluk bırak */
+}
+
+.feature {
+  display: block; /* İçeriği dikey sıralamak için */
+  margin-bottom: 10px; /* Özellikler arasında ekstra boşluk */
+}
+
+.highlight-text {
+  font-weight: bold;
+  display: block; /* Başlıkların tam genişlikte olmasını sağlar */
+  margin-bottom: 5px; /* Başlık ile açıklama arasına boşluk ekler */
+  font-size: 1.2em; /* Başlıkları biraz büyüt */
+}
+
+.normal-text {
+  display: block; /* Açıklamalar da başlıkların altına geçsin */
+  font-size: 1em;
+  line-height: 1.5; /* Okunabilirliği artır */
+}

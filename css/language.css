@@ -1,0 +1,125 @@
+/* Dil menüsü konumu */
+#language {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50px;
+    max-height: 60px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, width 0.3s ease, opacity 0.2s ease; /* Daha optimize geçişler */
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    will-change: transform, opacity; /* Tarayıcı önbelleğe alacak */
+    backface-visibility: hidden; /* GPU hızlandırma */
+    perspective: 1000px; /* 3D render hızlandırma */
+}
+
+#language.open {
+    width: 250px;
+    max-height: 400px;
+    opacity: 1;
+    transform: translateZ(0); /* GPU kullanarak akıcı geçiş */
+}
+
+
+
+
+#body.hidden {
+    visibility: hidden; /* Sayfa gizlensin, yüklenmeden önceki anı önler */
+}
+
+
+
+
+
+
+
+
+#language.open .language-option {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.3s forwards ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.language-option span {
+    font-size: 1rem;   /* Yazı boyutu */
+    font-weight: 500;   /* Yazı kalınlığı */
+    color: #000000;
+  }
+
+
+
+
+
+/* Buton */
+#menu-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Menü içindeki diller */
+#menu-list {
+    display: none;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#language.open #menu-list {
+    display: block;
+}
+
+/* Dil seçenekleri */
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.language-option img {
+    width: 30px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.language-option:hover {
+    background: #ffffff;
+    border-radius: 5px;
+}

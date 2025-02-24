@@ -1,0 +1,460 @@
+
+
+@media (min-width: 1200px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Boşluğu sıfırla */
+    border: none;
+    display: block;
+    }
+    }
+    /* Dropdown menü içinde padding ayarla */
+    .dropdown-menu {
+    margin-top: -5px; /* Üst boşluğu azaltarak hızlı hareketlerde kaybolmasını önle */
+    padding-top: 10px; /* İçeride boşluk ekleyerek düzenli görünüm sağla */
+    
+    }
+    
+    /* Masaüstü için hover ile açılma ve geçiş animasyonu */
+    @media (min-width: 1200px) {
+    .nav-item.dropdown {
+        position: relative;
+    }
+    
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+        animation: fadeSlideIn 0.3s ease-in-out forwards;
+    }
+    
+    /* Dropdown menü navbar linkine bağlı olacak (boşluk sorunu çözülüyor) */
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform: translateY(-10px);
+        pointer-events: auto; /* Mobilde kaybolma sorunu için düzeltildi */
+    }
+    
+    .nav-item.dropdown:hover .dropdown-menu,
+    .nav-item.dropdown:hover > .nav-link {
+        background-color: #f8f9fa; /* Hover rengi */
+        color: #0056b3; /* Mavi renk kalacak */
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /* Açılma animasyonu */
+    @keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+    
+    /* Mobil için dropdown açma düzeltmesi */
+    @media (max-width: 1200px) {
+    .dropdown-menu {
+        position: static; /* Mobilde absolute olursa kayboluyor, bunu düzeltiyoruz */
+        opacity: 1;
+        visibility: visible;
+        display: none; /* Mobilde başlangıçta kapalı olacak */
+        background-color: #d3e8ff;
+    }
+    
+    .nav-item.dropdown.open .dropdown-menu {
+        display: block;
+    }
+    }
+    
+    
+    
+        
+    /* Dropdown içindeki öğeler arasına boşluk bırak */
+    .dropdown-menu .dropdown-item {
+    padding: 20px 120px; /* Yatay ve dikey boşluk ayarla */
+    font-size: 17px; /* Font boyutunu ayarla */
+    font-weight: bold;
+    color: #0b006e;
+    }
+    
+    
+    
+    /* Dropdown oklarını kaldır */
+    .navbar .dropdown-toggle::after {
+    display: none !important;
+    }
+    
+    /* Menü öğelerini ortala */
+    .navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Menü öğeleri arasına boşluk bırak */
+    }
+    
+    /* Dropdown menü içeriğini ortala */
+    .dropdown-menu {
+    text-align: center;
+    padding: 10px 0; /* İç boşluğu ayarla */
+    }
+    
+    /* Dropdown menü öğeleri arasındaki boşluk */
+    .dropdown-item {
+    padding: 10px 20px;
+    font-size: 16px; /* Yazı fontunu ayarla */
+    font-weight: bold;
+    }
+    
+    /* Dropdown menü açıkken kapanmayı engelle */
+    @media (min-width: 1200px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    }
+    }
+    
+    /* Hover sırasında link rengi */
+    @media (min-width: 1200px) {
+    .dropdown-item:hover {
+    background-color: #f0f0f0;
+    }
+    }
+    
+    
+    
+    
+      
+      /* 991px ve üzeri için özel buton stili */
+      @media (min-width: 1200px) {
+        .custom-contact {
+          background-color: #9b0a0a !important;
+          color: white !important;
+          padding: 12px 30px;
+          width: 200px; /* Sabit genişlik */
+          border-radius: 50px;
+          text-align: center;
+          display: inline-block;
+          font-weight: bold;
+          transition: all 0.3s ease-in-out;
+        }
+      
+      
+      
+        /* Üstüne gelince animasyon */
+        .custom-contact:hover {
+          background-color: white !important; /* Arka plan beyaz */
+          color: #9b0a0a !important; /* Yazı kırmızı */
+          box-shadow: 0px 0px 10px rgba(155, 10, 10, 0.6); /* Hafif gölge */
+        }
+      
+        /* .nav-link sınıfının etkisini kaldırmak için */
+        .navbar-nav .nav-item .custom-contact {
+          color: white !important; /* Yazı rengini beyaz zorla */
+        }
+      
+        .navbar-nav .nav-item .custom-contact:hover {
+          color: #9b0a0a !important; /* Üzerine gelince kırmızı */
+        }
+      }
+      
+      
+      
+      .navbar-collapse {
+        position: relative;
+      }
+      
+      
+      
+      
+      .custom-navbar {
+        background-color: rgba(207, 248, 202, 0.95); /* Hafif mat, opak yeşil */
+        backdrop-filter: blur(8px); /* Arka plan bulanıklığı */
+        -webkit-backdrop-filter: blur(8px); /* Safari desteği için */
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+        padding: 10px 0; /* Yükseklik */
+        display: flex;
+        justify-content: center;  /* Yatayda ortalar */
+        align-items: center;  /* Dikeyde ortalar */
+        width: 100%;
+      }
+      
+      /* Scroll sırasında navbar değişimi */
+      .custom-navbar.scrolled {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        padding: 10px 0; /* Daha küçük bir yükseklik */
+      }
+      
+      /* Navbar logo animasyonu */
+      .navbar-logo {
+        transition: all 0.3s ease;
+        width: auto;
+        height: 70px;
+        position: relative;
+      }
+      
+      .custom-navbar.scrolled .navbar-logo {
+        width: auto;
+        height: 60px;
+      }
+      
+      @media (max-width: 768px) {
+        .navbar-logo {
+          transition: all 0.3s ease;
+          width: auto;
+          height: 60px;
+        }
+      
+        .custom-navbar.scrolled .navbar-logo {
+          width: auto;
+          height: 50px;
+        }
+      }
+      
+      /* Navbar link başlangıç stili */
+      .nav-link {
+        color: #36328a !important; /* Varsayılan gri rengi geçersiz kılar */
+        transition: all 0.3s ease;
+        position: relative;
+        text-decoration: none; /* Alt çizgiyi kaldır */
+      }
+      
+      /* Hover sırasında link rengi ve alt çizgi animasyonu */
+      .nav-link:hover {
+        color: #85a8ff !important; /* Açık mavi renk */
+      }
+      
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: #85a8ff;
+        transition: width 0.3s ease;
+      }
+      
+      /* Hover sırasında sadece büyük ekranlarda alt çizgi genişlesin */
+      @media (min-width: 1200px) {
+        .nav-link:hover::after {
+          width: 100%;
+        }
+      }
+      @media (min-width: 1200px) {
+      .nav-link.dropdown-toggle:hover {
+        color: #85a8ff !important; /* Hover durumunda renk değişir */
+      }
+    }
+      /* Hamburger menü arka plan rengini değiştir */
+      .navbar-toggler {
+        background-color: #ffffff; /* Kırmızı arka plan */
+      }
+      
+      
+      /* Hamburger menüdeki yazıları ortalamak */
+      .navbar-nav .nav-item .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      
+      
+      
+      
+      .navbar-nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      
+      .nav-item {
+        text-align: center;
+      }
+      
+      /* Küçük ekranlar için menüyü de ortalama */
+      @media (max-width: 992px) {
+        .navbar-collapse {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      
+      @media (min-width: 992px) {
+        /* İletişim butonunun alt çizgisini kaldır */
+        .custom-contact::after {
+          display: none !important;
+        }
+      }
+      
+
+
+
+
+
+
+
+
+
+
+
+  /*footer ve sayfa sonu*/
+
+
+
+
+
+  
+  .footerbg{
+    background-color: #102852;
+  }
+
+
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+.html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+        .customh6{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 25px;
+          color: #090053;
+          font-weight: bold;
+        }
+      
+        .customh5{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 17px;
+          color: #5d5d63;
+          font-weight: bold;
+        }
+  
+            
+        .customh7{
+          font-family: 'Jost',sans-serif;
+          font-size: 27px;
+          color: #090053;
+          font-weight: bold;
+        }
+
+        .customh8{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+          line-height: 1.5;
+          color: #353535;
+          
+        }
+
+        .customh9{
+          font-family: 'Inter',sans-serif;
+          font-size: 23px;
+          color: #090053;
+          font-weight: bold;
+        }
+
+        .customh10{
+          font-family: 'Inter',sans-serif;
+          font-size: 35px;
+          color: #090053;
+          font-weight: bold;
+        }
+
+
+        .customh11{
+          font-family: 'Inter',sans-serif;
+          font-size: 19px;
+          color: #414141;
+          font-weight: bold;
+        }
+
+        .customh12{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 17px;
+          color: #5d5d63;
+        }
+
+
+
+
+
+
+
+.footerbg .text-uppercase{
+  font-size: 17px;
+}
+
+.footerbg .text-white{
+  font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dropdown menüde border'ı kaldırmak için */
+@media (max-width: 1199px) {
+  .dropdown-menu {
+    border: none;  /* Border'ı kaldır */
+    box-shadow: none; /* Gölgeyi kaldır */
+    background-color: #d3e8ff; /* Mobilde menü arka planı için renk */
+  }
+}
+
+/* 1200px ve üzeri için border'ı ve animasyonları koru */
+@media (min-width: 1200px) {
+  .dropdown-menu {
+    border: 1px solid #007bff;  /* Mavi renkli border'ı uygula */
+    background-color: white; /* Arka plan rengini beyaz yap */
+  }
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    animation: fadeSlideIn 0.3s ease-in-out forwards;
+  }
+}

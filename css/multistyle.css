@@ -1,0 +1,230 @@
+/*banner*/
+.card1 {
+    position: relative;
+    width: 100%;
+    height: 300px; /* PC boyutunda sabit yükseklik */
+    top: 90px;
+  }
+
+  .uygulamalarimg {
+    width: 100%;
+    height: 100vh;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+  }
+
+  .text-container h5 {
+    font-family: 'Jost', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .btn-2 {
+    width: 200px;
+    background-color: #ad0101;
+    border-color: #410000;
+  }
+
+  /* TV ve geniş ekranlar */
+  @media (min-width: 1200px) {
+    .card1 {
+      height: 300px;
+    }
+  }
+
+  /* Mobil cihazlar */
+  @media (max-width: 991px) {
+    .text-container h5 {
+      font-size: 2.5rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/*gövde kısmı , biz kimiz*/
+/* Ana container */
+.cstm-container1 {
+    position: relative;
+    top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+    margin: auto;
+}
+
+/* Ana düzenleme: Linkler sol, içerik sağ */
+.cstm-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 50px; /* Linkler ve içerik arasında boşluk */
+}
+
+/* Sol taraftaki link alanı */
+.cstm-links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px; /* Belirli bir genişlik */
+}
+
+/* "Ürünler" başlığı */
+.cstm-links-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+}
+
+/* Linkler */
+.cstm-link {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    padding: 8px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+.cstm-link:hover {
+    color: rgb(23, 136, 0);
+}
+
+/* İçerik alanı */
+.cstm-content {
+    flex: 1;
+}
+
+/* Mobilde sola yaslayıp genişletme */
+@media (max-width: 767px) {
+    .cstm-container1 {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 10px;
+        text-align: left;
+    }
+}
+
+/* 1200px ve altına gelince linkleri tamamen kaldır */
+@media (max-width: 1200px) {
+    .cstm-links-container {
+        display: none;
+    }
+    .cstm-container1 {
+        justify-content: center;
+        width: 90%;
+    }
+}
+
+/* Tablet görünümü için */
+@media (max-width: 991px) {
+    .cstm-container1 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1500px) {
+    .cstm-container1 {
+        width: 100%;
+    }
+}
+
+.cstm-card2 {
+    border: none;
+}
+
+.cstm-greenimg {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.footerbg {
+    position: relative;
+    top: 200px;
+}
+
+.cstm-different{
+    color: rgb(17, 102, 0);
+}
+
+
+
+
+
+
+
+
+
+
+/*product features*/
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Özellikler arasında daha fazla boşluk bırak */
+}
+
+.feature {
+    display: block; /* İçeriği dikey sıralamak için */
+    margin-bottom: 10px; /* Özellikler arasında ekstra boşluk */
+}
+
+.highlight-text {
+    font-weight: bold;
+    display: block; /* Başlıkların tam genişlikte olmasını sağlar */
+    margin-bottom: 5px; /* Başlık ile açıklama arasına boşluk ekler */
+    font-size: 1.2em; /* Başlıkları biraz büyüt */
+}
+
+.normal-text {
+    display: block; /* Açıklamalar da başlıkların altına geçsin */
+    font-size: 1em;
+    line-height: 1.5; /* Okunabilirliği artır */
+}
+
+
+
+
+/*industry card border none*/
+.cstm-industrycard{
+    border: none;
+}
+
+
+
+
+/*applications image*/
+.cstm-greenimg{
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+
